@@ -1,4 +1,4 @@
-node('centos'){
+node ('centos'){
 	stage('build'){
 		checkout scm
 	}
