@@ -1,0 +1,14 @@
+node(){
+	stage('build'){
+		checkout scm
+	}
+	stage('deploy'){
+		sh 'cd restapi-teach && sh run.sh'
+	}
+	stage('test'){
+		
+	}
+	stage('delivery'){
+    emailext attachLog: true, attachmentsPattern: '*.html,*.xml', body: 'pipeline test', subject: '这是一个测试', to: '17154463@qq.com'
+	}
+}
