@@ -1,6 +1,7 @@
 #/bin/bash
+pwd
 
-cd restapi-teach/backend  &&  nohup python3 project/cherrypy_startup.py >& run.log &
+cd autodeploy/restapi-teach  &&  nohup python3 project/cherrypy_startup.py >& run.log &
 
 exit 0
 

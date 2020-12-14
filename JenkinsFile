@@ -1,6 +1,8 @@
 node ('centos'){
 	stage('build'){
 		checkout scm
+		echo 'build'
+		pwd
 	}
 	stage('deploy'){
 		sh 'cd restapi-teach && sh run.sh'
