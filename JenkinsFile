@@ -11,6 +11,6 @@ node ('centos'){
 		
 	}
 	stage('delivery'){
-    emailext attachLog: true, attachmentsPattern: '*.html,*.xml', body: 'pipeline test', subject: '这是一个测试', to: '17154463@qq.com'
+    emailext attachLog: true, attachmentsPattern: '*.html,*.xml', body: 'pipeline 测试', subject: '这是一个测试', to: '17154463@qq.com'
 	}
 }
