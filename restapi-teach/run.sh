@@ -6,7 +6,8 @@ pwd
 #cd backend
 #python3 project/cherrypy_startup.py
 
-export BUILD_ID=anyWordIsOk
+echo JAVA_HOME is $JAVA_HOME
+echo PATH is $PATH
 cd backend  && nohup python3 project/cherrypy_startup.py & > run.log &
 
 exit 0
