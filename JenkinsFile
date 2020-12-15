@@ -5,7 +5,7 @@ node ('centos'){
 	//	pwd
 	}
 	stage('deploy'){
-		sh 'cd restapi-teach && sh run.sh'
+		sh 'cd restapi-teach && JENKINS_NODE_COOKIE=dontKillMe sh run.sh'
 	}
 	stage('test'){
 		
