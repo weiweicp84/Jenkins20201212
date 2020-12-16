@@ -10,7 +10,7 @@ def listCourse():
         'pagesize':20
     }
     retlist=[]
-    r=requests.get(f"http://localhost/api/mgr/sq_mgr/",params=payloade)
+    r=requests.get(f"http://192.168.2.19/api/mgr/sq_mgr/",params=payloade)
     ret=r.json()['retlist']
     for one in ret:
         retlist.append(one['name'])

@@ -9,7 +9,7 @@ node ('centos'){
 	}
 	stage('test'){
 		node(){
-			bat 'robot -P D:\\PycharmProjects\\MyProject\\RFTest\\rf2\\ -t Test1 D:\\PycharmProjects\\MyProject\\RFTest\\rf2\\robotTest2.robot'
+			bat 'robot -P . -t robotTest2.robot'
 		}
 	}
 	stage('delivery'){
