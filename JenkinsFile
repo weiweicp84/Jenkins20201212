@@ -9,7 +9,7 @@ node ('centos'){
 	}
 	stage('test'){
 		node(){
-			bat 'robot -P . -t robotTest2.robot'
+			bat 'robot -P . -t Test1 robotTest2.robot'
 		}
 	}
 	stage('delivery'){
