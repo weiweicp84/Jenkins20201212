@@ -8,7 +8,9 @@ node ('centos'){
 		sh 'cd restapi-teach && JENKINS_NODE_COOKIE=dontKillMe sh run.sh'
 	}
 	stage('test'){
-		
+		node(){
+			bat 'robot -P D:\\PycharmProjects\\MyProject\\RFTest\\rf2\\ -t Test1 D:\\PycharmProjects\\MyProject\\RFTest\\rf2\\robotTest2.robot'
+		}
 	}
 	stage('delivery'){
     emailext attachLog: true, attachmentsPattern: '*.html,*.xml', body: 'pipeline 测试', subject: '这是一个测试', to: '17154463@qq.com'
