@@ -9,6 +9,7 @@ node ('centos'){
 	}
 	stage('test'){
 		node(){
+			checkout scm
 			bat 'robot -P . -t Test1 robotTest2.robot'
 		}
 	}
